@@ -1,0 +1,13 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+
+
+<h1 class="mensaje">{{mensaje}}</h1>    
+{% endblock cancha %}
+
+
+{% for i in lista  %}
+    <p>{{i}}</p>
+{% endfor %}

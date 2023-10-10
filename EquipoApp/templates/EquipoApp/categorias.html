@@ -1,0 +1,17 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+<div class="eleccion_rival" style="margin-left: 30%;">
+    <p style="border: 1px solid; border-color: aquamarine; padding: 2px;">nuevo presupuesto = {{presupuesto}}</p>
+    <p style="border: 1px solid; border-color: aquamarine; padding: 2px;">categoria actual = {{categoria}}</p>
+</div>
+<div class="eleccion_rival" style="margin-left: 30%;">
+    <h2 style="border: 1px solid; border-color: aquamarine; padding: 2px;">nuevo torneo</h2>
+{% for club in clubes  %}
+        <h3 style="border: 1px solid; border-color: aquamarine; padding: 2px;">{{club.nombre}}--{{club.general}}</h3>
+        {% endfor %}
+</div>
+    
+{% endblock cancha %}

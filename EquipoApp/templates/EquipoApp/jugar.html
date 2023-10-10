@@ -1,0 +1,22 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/estilos_jugadores.css' %}">
+
+    <h2>ver si esta:{{saber}}</h2>
+    <h2>{{mensaje}}</h2>
+    <p>plantel :{{cantidad}}</p>
+    {% if resultado %}
+    <p class="formjugador">{{equipo.nombre}}:  {{resultado_mio}}</p>
+    <p class="formjugador">{{nombre}}:  {{resultado_rival}}</p>
+    {% endif %}
+        
+    
+{% endblock cancha %}
+
+
+{% for i in lista  %}
+    <p>{{i}}</p>
+{% endfor %}
+    

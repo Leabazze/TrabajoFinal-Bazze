@@ -1,0 +1,78 @@
+<html>
+    {% for arquero in arqueros  %}
+    <form action="{% url 'ComprarArquero' arquero.id %}"  method="post">{% csrf_token %}
+        <p>{{arquero.nom}}-{{arquero.gen}}-{{arquero.valeur}}</p>
+        <input type="hidden" name="arquero" value="{{arquero.id}}">
+        <button type="submit">COMPRAR</button>
+    </form>
+    {% endfor %}
+</html>
+
+
+También puedes modificar tu HTML para eliminar los botones que no funcionan. Por ejemplo:
+
+HTML
+
+<form action="#">
+            <p>ARQUERO:  <a href="{% url 'Jugadores' %}?arquero=1" class="button"> comprar</a></p>
+            <p>DEFENSOR: <a href="{% url 'Jugadores' %}?defensor=1" class="button"> comprar</a></p>
+            <p>Defensor 2 <a href="" class="button"> comprar</a></p>
+            <p>Defensor 3 <a href="" class="button"> comprar</a></p>
+
+
+            <input class="ingreso" type="text" name="apellido" placeholder="Apellido">
+            <br>
+            <input class="ingreso" type="number" name="edad" placeholder="Edad">
+            <br>
+            <input class="boton" type="submit" value="Cargar">
+
+            nom: Nombre
+gen: General
+potentiel: Potencial
+performance: Rendimiento
+pays: País
+club: Club
+bonpied: Pie fuerte
+mauvaispied: Pie débil
+gestestechniques: Gestos técnicos
+taille: Altura
+rendimientoofensivo: Rendimiento ofensivo
+rendimientodefensivo: Rendimiento defensivo
+valeur: Valor
+salaire: Salario
+id: ID
+centres: Centros
+finition: Remate
+precisiontete: Precisión de cabeza
+passescourtes: Pases cortos
+volee: Volea
+dribbles: Regates
+effet: Efecto
+pcf: Potencia de tiro
+passeslongues: Pases largos
+controle: Control
+acceleration: Aceleración
+vitesse: Velocidad
+agilite: Agilidad
+reactivite: Reacción
+equilibre: Equilibrio
+puissancefrappe: Potencia de disparo
+detente: Salto
+endurance: Resistencia
+force: Fuerza
+tirsdeloin: Tiros de larga distancia
+agressivite: Agresividad
+interceptions: Intercepciones
+placement: Colocación
+vista: Visión
+penalty: Penalty
+calme: Calma
+consciencedefensive: Conciencia defensiva
+tacledebout: Tacle de pie
+tacleglisse: Tacle deslizado
+plongeon: Parada
+jeumain: Juego con la mano
+jeupied: Juego con el pie
+placement_1: Colocación
+reflexes: Reflejos
+

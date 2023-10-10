@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+:root{
+    --color: #17a2ff;
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    height: 30vh;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #151e3f;
+
+}
+
+.btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    transform: all 0.6s ease;
+
+}
+
+.btn{
+    border: 3px solid;
+    
+}
+
+.btn:hover{
+    box-shadow: 0 0 20px var(--color);
+    border-color: var(--color);
+}
+.btn-1:hover{
+    background-color: black;
+}
+.btn-2:hover{
+    background-color: grey;
+}
+.btn-3:hover{
+    background-color: green;
+}
+.btn-4:hover{
+    background-color: silver;
+}
+
+.btn span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+}
+
+.btn span:nth-child(1){
+    right: 10%;
+    top: -10px;
+    background-color: #fff;
+}
+
+.btn span:nth-child(2){
+    left: 10%;
+    bottom: -10px;
+}
+
+.btn:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+    background-color: var(--color);
+}
+
+.btn:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate();
+    color: var(--color);
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+
+}
+
+.contenedor2 h1 {
+    font-size: 30px;
+    background-color: whitesmoke;
+    color: rebeccapurple;
+    border: #151e3f;
+    
+}
+.contenedor2 h1:hover{
+    color: rebeccapurple;
+    font-size: 50px;
+}
+
+
+.contenedorInicio {
+    margin-top: 150px;
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgb(46, 143, 46);
+    border: 3px solid;
+    border-radius: 5px;
+    border-color: #151e3f;
+    box-shadow: 7px 13px 37px blue;
+    padding: 5px;
+
+}
+
+.contenedorInicio h1{
+    display: block;
+    text-align: center;
+    color: black;
+    margin: 5px;
+}
+
+.contenedorInicio h2{
+    display: block;
+    margin: 5px;
+    text-align: center;
+    color: black;
+}
+
+.contenedorInicio p{
+    text-align: center;
+}
+

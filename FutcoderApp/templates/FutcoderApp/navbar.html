@@ -1,0 +1,29 @@
+    {% load static  %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <nav >
+            <div class="contenedor">
+                <a href="{% url 'Home' %}">
+                    <img class="logo" src="{% static 'imagenes/futcoder.png' %}" alt="logo">
+                    <span></span>
+                    <span></span>
+                </a>
+                
+                <a href="{% url 'Home' %}" class="btn btn-1">Home
+                    <span></span>
+                    <span></span>
+                </a>
+                
+                <a href="{% url 'Cancha' %}" class="btn btn-3" >Cancha
+                    <span></span>
+                    <span></span>
+                </a >
+                    
+                <a href="{% url 'Instru' %}" class="btn btn-2">instrucciones
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>   
+    </nav>
+    

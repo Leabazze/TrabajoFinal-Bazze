@@ -1,0 +1,43 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+{% load static %}
+{% block cancha %}
+
+<html>
+    <div class="div1">
+        <link rel="stylesheet" href="{% static 'css/estilos_jugadores.css' %}">
+        <div class="div">
+            <form class="formulario1" action="{% url 'BuscarNombre' %}" method="get">
+                <h3>BUSCA jugadores por su nombre</h3>
+                <br>
+                <input class="ingreso" type="text" name="nom" placeholder="Nombre">
+                <br>
+                <input class="boton" type="submit" value="Buscar">
+            </form>
+        </div>
+        <div class="div">
+            <form class="formulario1" action="{% url 'BuscarPrecio' %}" method="get">
+                <h3>BUSCA jugadores por precio</h3>
+                <br>
+                <input class="ingreso" type="number" name="valeur" placeholder="Precio">
+                <br>
+                <input class="boton" type="submit" value="Buscar">
+            </form>
+        </div>
+    </div>
+    <div class="divp">
+        <h2 class="posicion">{{posicion}}</h2>
+        {% for jugador in jugadores  %}
+        <form class="formjugador" action="{% url 'ComprarJugador' jugador.id %}"  method="post">{% csrf_token %}
+            <p> {{jugador.nom}}
+                <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                <span style="color: rgb(189, 52, 52);">{{jugador.gen}}</span>
+                <span style="color: rgb(12, 65, 109);">precio: </span> 
+                <span style="color: blue;">{{jugador.valeur}}</span> 
+                <button class="botonjugador" type="submit">COMPRAR</button>
+            </p>
+        </form>
+    </div>
+    {% endfor %}
+</html>
+
+{% endblock cancha %}

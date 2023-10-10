@@ -1,0 +1,19 @@
+
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/estilos_jugadores.css' %}">
+
+<body>
+    <div style="margin-top: 30px; margin-left: 20%">
+        <p class="formjugador">{{mensaje}}</p>
+        <h2 class="formjugador">
+            {{jugador_comprado.nombre}}--{{jugador_comprado.valor}}
+        </h2>
+        <h2 class="formjugador">presupuesto restante: {{presupuesto}}</h2>
+    </div>
+    </body>
+        
+    
+{% endblock cancha %}

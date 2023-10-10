@@ -1,0 +1,33 @@
+{% extends 'FutcoderApp/padre.html' %}
+
+{% block contenido %}
+
+{% load static  %}
+<link rel="stylesheet" href="{% static 'css/new_style.css' %}">
+
+<head>
+</head> 
+<body>
+    <div class="formulario3">
+        <h3>Este juego esta realizado sobre la base de datos del juego Fifa2022, tiene todos sus jugadores, clubes y algunos agregados</h3>
+      <p class="instru">1- Creas tu equipo</p>
+      <p class="instru">2- compras jugadores, tenes un presupuesto inicial de 50 millones</p>
+      <p class="instru">3- Se crea el Torneo , empezas en la categoria mas baja , la 'E'</p>
+      <p class="instru">4- jugas contra 10 equipos aleatorios correspondientes a esa categoria</p>
+      <p class="instru">5- Depende de la calidad de tu equipo y el del rival el resultado </p>
+      <p class="instru">5b- a mas calidad mas posibilidades de anotar goles</p>
+      <p class="instru">6- Para ascender tenes que llegar a un total de 20 puntos como minimo</p>
+      <p class="instru">7- Cuando llegues a los 20 puntos se habilita la opcion de ascender</p>
+      <p class="instru">8- Si no ascendes , podes reiniciar el torneo</p>
+      <p class="instru">9- Se habilita el reinicio una vez hayas jugado los 10 partidos</p>
+      <p class="instru">10- Si tenes a Messi en el plantel, te garantiza un gol mas por partido</p>
+      <p class="instru">11- cada vez que ascendes, se crea un nuevo torneo con rivales al azar </p>
+      <p class="instru">12 el nuevo torneo es de mejor calidad, con mas posibilidades de que te hagan mas goles</p>
+      <p class="instru">14- Cada ascenso te otorga 50 millones mas de presupuesto</p>
+      <p class="instru">15- Al final te espera una sorpresa</p>
+
+    </div>
+    
+</body>
+
+{% endblock contenido %}

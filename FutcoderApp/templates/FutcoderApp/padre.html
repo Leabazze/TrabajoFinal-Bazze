@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    {% load static  %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutCoder</title>
+    <link rel="stylesheet" href="{% static 'css/new_style.css' %}">
+
+        
+    <div>
+        {% if user.is_authenticated %}
+        <p>{{user.username}}</p>
+        <a class="botonreg2" href="{% url 'Logout' %}">Cerrar Sesion</a>
+        <a class="botonreg2" href="{% url 'CrearEquipo' %}">crea el equipo</a>
+        {% else %}
+        <a class="botonreg2" href="{% url 'Login' %}">Iniciar Sesion</a>
+        <a class="botonreg2" href="{% url 'Registro' %}">Registrarse</a>
+        {% endif %}
+    </div>
+    {% include 'FutcoderApp/navbar.html' %}
+</header>
+
+
+
+<body>
+<div >
+    <img src="{% static 'imagenes/fondo.png' %}" alt="fondo" style="position: fixed; top: 0; left: 0; z-index: -1; width: 100%; margin-top: 20%;">
+</div>
+
+        {% block contenido %}
+        
+        {% endblock contenido %}
+        
+
+</body>
+
+</html>

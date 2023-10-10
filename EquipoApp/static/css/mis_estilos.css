@@ -1,0 +1,180 @@
+.formulario{
+    position: relative;
+    background-color: silver;
+    padding: 10px;
+    border: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    border-color: blue;
+    margin-left: 30%;
+    box-shadow: 7px 13px 37px blue;
+    
+}
+.texto_dt{
+    padding: auto;
+}
+
+.eleccion_rival{
+    margin-top: 10%;
+    position: relative;
+    background-color: silver;
+    box-sizing: border-box;
+    width: 40%;
+    margin-left: 30%;
+    border: 10px;
+    border-radius: 10px;
+    border-color: blue;
+    box-shadow: 7px 13px 37px blue;
+
+}
+
+.ingreso{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+
+.selector{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+.selector:hover{
+    cursor: pointer;
+}
+
+.boton{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+.boton:hover{
+    transform: scale(105%);
+    background-color: grey;
+    cursor: pointer;
+}
+
+.cargado{
+    background-color: silver;
+    color: green;
+}
+
+footer{
+    color: rosybrown;
+    height: 100px;
+    margin-top: 200px;
+    padding: 50px;
+    background-color: silver;
+}
+
+.busqueda{
+    margin-top: 200px;
+    background-color: blue;
+}
+
+.formulario-jugadores{
+    margin-top: 150px;
+    position: relative;
+    background-color: silver;
+    box-sizing: border-box;
+    width: 80%;
+    min-width: 300px;
+    height: fit-content;
+    min-height: 200px;
+    padding: 50px;
+    border: 10px;
+    border-radius: 10px;
+    border-color: blue;
+    margin-left: 10%;
+    box-shadow: 7px 13px 37px blue;
+    
+}
+.detalle{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.detalle-jugador{
+    display: inline-block;
+}
+
+.formato-jugador{
+    border: 1px solid;
+    border-color: blueviolet;
+    border-top-right-radius: 4px;
+
+}
+
+
+.jugador-nom{
+    display: inline-block;
+    border: 1px solid;
+    margin: 3px;
+    border-top-right-radius: 5px;
+    border-color: blueviolet;
+    width: 20%;
+}
+.jugador-gen{
+    display: inline-block;
+    border: 1px solid;
+    margin: 3px;
+    border-top-right-radius: 5px;
+    border-color: blueviolet;
+    width: 20px;
+}
+
+.jugador-valor{
+    display: inline-block;
+    border: 1px solid;
+    margin: 3px;
+    border-top-right-radius: 5px;
+    border-color: blueviolet;
+    width: 8%;
+}
+
+.jugador-pais{
+    display: inline-block;
+    border: 1px solid;
+    margin: 3px;
+    border-top-right-radius: 5px;
+    border-color: blueviolet;
+    width: 20%;
+}
+
+.jugador-club{
+    display: inline-block;
+    border: 1px solid;
+    margin: 3px;
+    border-top-right-radius: 5px;
+    border-color: blueviolet;
+    width: 25%;
+}
+
+
+
+.jugador-opcion{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.contenedor-page{
+    border: 3px solid;
+    background-color: blueviolet;
+}
+.pagination{
+    border: 3px solid;
+}
+.page-item{
+    display: inline-block;
+    margin: 4px;
+}

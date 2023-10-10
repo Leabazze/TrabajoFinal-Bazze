@@ -1,0 +1,175 @@
+.div1{
+    float: right;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+.posicion{
+    margin-left: 60px;
+    background-color: rgba(68, 180, 68, 0.5);
+    width: 40%;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+    box-shadow: 3px 8px 20px blue;
+}
+
+.formulario1{
+    background-color: silver;
+    width: 400px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 10px;
+    border-radius: 10px;
+    border-color: blue;
+    box-shadow: 7px 13px 37px blue;
+}
+.formulario2{
+    background-color: silver;
+    width: 40%;
+    padding: 10px;
+    border: 10px;
+    border-radius: 10px;
+    border-color: blue;
+    box-shadow: 7px 13px 37px blue;
+}
+.formjugador2{
+    width: 400px;
+    background-color: silver;
+    margin-left: 40px;
+    padding: 5px;
+    border: 2px solid;
+    width: fit-content;
+    border-radius: 10px;
+    border-color: blue;
+    box-shadow: 7px 13px 37px blue;
+}
+
+.formjugador{
+    margin-left: 60px;
+    background-color: silver;
+    width: 45%;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+    box-shadow: 3px 8px 20px blue;
+    
+}
+.vender{
+    float: right;
+}
+.divp{
+    margin-top: 40px;
+}
+
+.selector{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+.selector:hover{
+    cursor: pointer;
+}
+.ingreso{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+.boton{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+.boton:hover{
+    transform: scale(105%);
+    background-color: rgba(68, 180, 68, 0.5);
+    cursor: pointer;
+}
+
+
+.botonjugador{
+    float: right;
+    width: 30%;
+    padding: 3px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 12px;
+}
+.botonjugador:hover{
+    transform: scale(110%);
+    background-color: rgba(68, 180, 68, 0.5);
+    cursor: pointer;
+}
+
+.botonjugadorE{
+    float: right;
+    width: 30%;
+    padding: 3px;
+    margin: 3px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 12px;
+}
+.botonjugadorE:hover{
+    transform: scale(110%);
+    background-color: rgba(68, 180, 68, 0.5);
+    cursor: pointer;
+}
+.posicionE{
+    margin-left: 60px;
+    background-color: rgba(68, 180, 68, 0.5);
+    width: 40%;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+}
+.presupuesto{
+    margin-left: 60px;
+    background-color: rgba(68, 180, 68, 0.5);
+    width: 40%;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+}
+
+.calidad{
+    margin-left: 60px;
+    background-color: rgba(68, 180, 68, 0.5);
+    width: 40%;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+    box-shadow: 3px 8px 20px blue;
+}
+.botonreg{
+    float: right;
+    width: 10%;
+    padding: 3px;
+    margin: 3px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 16px;
+    background-color: aqua;
+    color: aquamarine;
+}
+.botonreg:hover{
+    transform: scale(110%);
+    background-color: rgba(68, 180, 68, 0.5);
+    cursor: pointer;
+}

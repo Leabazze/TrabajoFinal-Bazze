@@ -1,0 +1,14 @@
+{% extends 'FutcoderApp/padre.html' %}
+
+{% block contenido %}
+
+<div class="formulario" style="bottom: 0;">
+    <form action="{% url 'Login' %}" method="post">{% csrf_token %}
+        <br>
+        {{miFormulario.as_p}}
+        <br>
+        <button type="submit">Ingresar</button>
+    </form>
+</div>
+
+{% endblock contenido %}

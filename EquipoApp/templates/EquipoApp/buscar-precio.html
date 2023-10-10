@@ -1,0 +1,22 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+{% load static %}
+
+{% block cancha %}
+<link rel="stylesheet" href="{% static 'css/estilos_jugadores.css' %}">
+
+<div class="divp">
+    <h1 class="posicion">jugadores fifa</h1>    
+    {% for jugador in jugadores  %}     
+    <form class="formjugador" action="{% url 'ComprarJugador' jugador.id %}"  method="post">{% csrf_token %}
+        <p> {{jugador.nom}}
+            <span style="color: rgb(12, 65, 109);">calidad: </span> 
+            <span style="color: rgb(189, 52, 52);">{{jugador.gen}}</span>
+            <span style="color: rgb(12, 65, 109);">precio: </span> 
+            <span style="color: blue;">{{jugador.valeur}}</span> 
+            <button class="botonjugador" type="submit">COMPRAR</button>
+        </p>
+    </form>
+    {% endfor %} 
+</div>
+
+{% endblock cancha %}

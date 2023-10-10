@@ -1,0 +1,60 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+
+
+<div class="eleccion_rival" style="margin-left: 10%;">
+    <h2>torneo categoria: {{categoria}}</h2>
+
+    {% for club in torneo %}
+        <form class="formulario" action="{% url 'Jugar' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="rival" value="{{club.nombre}}">
+
+            {% if club.nombre in jugado %}  
+            <div class="club"><h3>{{club.nombre}}--{{club.gen}}
+
+                <input class="botonjugador"  type="submit" value="Jugar" disabled>
+            </h3>
+                <div class="opciones">
+                    {% for resultado in resultados %}
+                    {% if resultado.club == club %}
+                    <p>resultado: {{equipo.nombre}}: {{resultado.resultado_mio}} rival: {{resultado.resultado_rival}}</p>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <div class="club2">{{club.nombre}}--{{club.gen}}
+                <input class="botonjugador" type="submit" value="Jugar">
+            </div>
+            {% endif %}
+        </form>
+    {% endfor %}
+</div>
+
+<div class="eleccion_rival" style="float: right; margin-right: 10%;">
+    <h2>Detalles Torneo</h2>
+    <p class="formulario">promedio equipo {{promedio}}</p>
+    <p class="formulario">puntos sacados {{puntos}}</p>
+    <p class="formulario">partidos jugados {{partidos}}</p>
+    <form class="formulario" style="height: 30px;" action="{% url 'Ascender' %}">
+        {% if puntos >= 20 %}
+        <input class="botonjugadorS" type="submit" value="Ascender">
+        {% else %}
+        <input class="botonjugadorS" type="submit" value="Ascender" disabled>
+        {% endif %}
+    </form>
+    <form class="formulario" action="{% url 'BorrarResultados' %}">
+        {% if partidos >= 10 %}
+        <input class="botonjugadorS" type="submit" value="Reiniciar Torneo">
+        {% else %}
+        <input class="botonjugadorS" type="submit" value="Reiniciar Torneo" disabled>
+        {% endif %}
+    </form>
+</div>
+<a href="{% url 'BorrarCat' %}"></a>
+{% endblock cancha %}
+

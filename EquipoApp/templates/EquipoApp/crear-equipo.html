@@ -1,0 +1,15 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+
+<div class="formulario">
+    <form action="{% url 'CrearEquipo' %}" method="post">{% csrf_token %}
+        <p>Crea Tu Equipo</p>
+        <br>
+        {{miFormulario.as_p}}
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+{% endblock cancha %}

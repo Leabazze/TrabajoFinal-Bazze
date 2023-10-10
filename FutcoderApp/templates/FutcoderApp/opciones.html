@@ -1,0 +1,9 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+{% load static %}
+{% block cancha %}
+    <div>
+        <p class="texto">{{user}}</p>
+    </div>
+<a href="{% url 'BorrarCat' %}"> Borrar Categorias</a>
+<a href="{% url 'Categorias' %}">Crear CAtegorias</a>
+{% endblock cancha %}

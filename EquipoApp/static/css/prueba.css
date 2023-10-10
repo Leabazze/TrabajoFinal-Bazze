@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Estilos para la sección de rivales */
+.eleccion_rival2 {
+    margin: 0 auto;
+    width: 400px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.eleccion_rival{
+    float: left;
+    margin-top: 5%;
+    background-color: rgba(68, 180, 68, 0.5);
+    box-sizing: border-box;
+    width: 37%;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+    box-shadow: 3px 8px 20px blue;
+
+}
+  /* Estilos para el botón de jugar */
+
+
+
+.formulario2 {
+    margin: 10px 0;
+}
+.formulario{
+    margin: 0 auto;
+    position: relative;
+    background-color: silver;
+    padding: 10px;
+    border: 5px;
+    border-top-right-radius: 10px;
+    border-color: blue;
+    box-shadow: 3px 8px 20px blue;
+}
+  
+.torneo{
+  margin: 0 auto;
+  position: relative;
+  background-color: silver;
+  width: 150px;
+  padding: 10px;
+  border: 5px;
+  border-top-right-radius: 10px;
+  border-color: blue;
+  box-shadow: 3px 8px 20px blue;
+}
+
+  /* Estilos para la sección de resultados */
+  .resultados {
+    margin: 0 auto;
+    width: 500px;
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  /* Estilos para el botón de ascender */
+  .ascender {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el botón de reiniciar torneo */
+  .reiniciar {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el texto */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+.club{
+    display: block;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    transition: all 1.6s ease;
+
+}
+.club:hover{
+    box-shadow: 7px 13px 37px silver;
+    height: 50px; 
+}
+
+.club:hover .opciones {
+    display: block;
+}
+
+.opciones {
+    display: none;
+}
+
+.botonjugador{
+  float: right;
+  width: 30%;
+  padding: 3px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 12px;
+}
+.botonjugador:hover{
+  transform: scale(110%);
+  background-color: rgba(68, 180, 68, 0.5);
+  cursor: pointer;
+}
+
+.botonjugadorS{
+  margin: 0 auto;
+  width: 50%;
+  padding: 3px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 12px;
+}
+.botonjugadorS:hover{
+  transform: scale(110%);
+  background-color: rgba(68, 180, 68, 0.5);
+  cursor: pointer;
+}
+.contenedor{
+  display: flex;
+  height: 30vh;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #151e3f;
+
+}

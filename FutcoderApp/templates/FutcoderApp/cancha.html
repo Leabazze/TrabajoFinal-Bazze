@@ -1,0 +1,33 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+{% load static %}
+{% block cancha %}
+    <div>
+        <p class="texto">DT {{user}}</p>
+    </div>
+    <img src="{% static 'imagenes/ima_cancha.png' %}" alt="cancha futbol">
+    <div class="cancha">
+        {% for jugador in lista %}
+        <div class="jugador {{jugador.posicion}}">
+            <div class="con_p">
+                <p class="puntaje">{{jugador.general}}</p>
+            </div>
+        {{ jugador.nombre }} 
+        <br>
+            <div class="opciones">
+                <p class="caracteristicas">Precio: {{jugador.valor}}</p>
+                <p class="caracteristicas">Pais: {{jugador.pais}}</p>
+                <p class="caracteristicas">Posicion: {{jugador.posicion}}</p>
+                <form method="post" action="{% url 'Vender' jugador.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="{{jugador.posicion}}">
+                    <button type="submit" class="button">VENDER</button>
+                </form>                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock cancha %}
+
+    
+    
+</html>

@@ -1,0 +1,15 @@
+
+{% extends 'FutcoderApp/padre-cancha.html' %}
+
+{% block cancha %}
+{% load static %}
+    <h3>Eres el campeon de Futcoder</h3>
+    <h2>{{mensaje}}</h2>
+    <div style="margin-left: 25%;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zyMzYKaU_6w?si=8HMlSWdhpMZygtUJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{% endblock cancha %}
+    </div>
+
+
+{% for i in lista  %}
+    <p>{{i}}</p>
+{% endfor %}

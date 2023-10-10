@@ -1,0 +1,377 @@
+{% extends 'FutcoderApp/padre-cancha.html' %}
+{% load static  %}
+
+{% block cancha %}
+    
+
+<html>
+    <body>
+        <link rel="stylesheet" href="{% static 'css/estilos_jugadores.css' %}">
+        {% if equipo %}
+        <div style="margin-top: 20px;">
+            <h2 class="calidad">equipo: {{equipo.nombre}}</h2>
+            <h2 class="calidad"> presupuesto: {{equipo.presupuesto}}</h2>
+            <h2 class="calidad">puntaje general: {{promedio}}</h2>
+        </div>
+            {% endif %}
+    
+<div style="height: 100%;"> 
+    <br>
+        {% if arquero %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>ARQUERO: {{arquero.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{arquero.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{arquero.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="arquero">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' arquero.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="arquero">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>ARQUERO:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="arquero">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+<div > 
+    <br>
+        {% if defensor %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>DEFENSOR: {{defensor.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{defensor.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{defensor.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="defensor">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' defensor.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="defensor">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>defensor:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="defensor">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+<div > 
+    <br>
+        {% if central %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>DEFENSOR: {{central.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{central.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{central.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="central">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' central.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="central">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>central:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="central">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+
+<div > 
+    <br>
+        {% if lat_izq %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>lateral izquierdo: {{lat_izq.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{lat_izq.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{lat_izq.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="lat_izq">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' lat_izq.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="lat_izq">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>lateral izquierdo:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="lat_izq">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+<div > 
+    <br>
+        {% if lat_der %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>lateral derecho: {{lat_der.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{lat_der.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{lat_der.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="lat_der">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' lat_der.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="lat_der">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>lateral derecho:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="lat_der">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+<div> 
+    <br>
+        {% if medio %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>mediocampista: {{medio.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{medio.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{medio.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="medio">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' medio.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="medio">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>mediocampista:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="medio">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+        <div > 
+            <br>
+                {% if medio_centro %}
+                <div class="formjugador">
+                    <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                        {% csrf_token %}
+                        <h3>medio centro: {{medio_centro.nombre}}
+                                <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                                <span style="color: rgb(189, 52, 52);">{{medio_centro.general}}</span>
+                                <span style="color: rgb(12, 65, 109);">precio: </span> 
+                                <span style="color: blue;">{{medio_centro.valor}}</span> 
+                        </h3>
+                        <input type="hidden" name="posicion" value="medio">
+                        <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+                    </form>
+                    <form class="vender2" method="post" action="{% url 'Vender' medio_centro.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="posicion" value="medio_centro">
+                        <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+                    </form>
+                    {% else %}
+                    <div class="formjugador">
+                        <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                            <p>medio centro:</p>
+                            {% csrf_token %}
+                            <input type="hidden" name="posicion" value="medio_centro">
+                            <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                    <br>
+                </div>
+<div> 
+    <br>
+        {% if medio_izq %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>medio izquiero: {{medio_izq.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{medio_izq.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{medio_izq.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="medio_izq">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' medio_izq.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="medio_izq">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>medio izquierdo:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="medio_izq">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        </div>
+        <div > 
+            <br>
+                {% if medio_der %}
+                <div class="formjugador">
+                    <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                        {% csrf_token %}
+                        <h3>medio derecho: {{medio_der.nombre}}
+                                <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                                <span style="color: rgb(189, 52, 52);">{{medio_der.general}}</span>
+                                <span style="color: rgb(12, 65, 109);">precio: </span> 
+                                <span style="color: blue;">{{medio_der.valor}}</span> 
+                        </h3>
+                        <input type="hidden" name="posicion" value="medio_der">
+                        <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+                    </form>
+                    <form class="vender2" method="post" action="{% url 'Vender' medio_der.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="posicion" value="medio_der">
+                        <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+                    </form>
+                    {% else %}
+                    <div class="formjugador">
+                        <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                            <p>medio derecho:</p>
+                            {% csrf_token %}
+                            <input type="hidden" name="posicion" value="medio_der">
+                            <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                    <br>
+                </div>
+<div> 
+    <br>
+        {% if enganche %}
+        <div class="formjugador">
+            <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                {% csrf_token %}
+                <h3>enganche: {{enganche.nombre}}
+                        <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                        <span style="color: rgb(189, 52, 52);">{{enganche.general}}</span>
+                        <span style="color: rgb(12, 65, 109);">precio: </span> 
+                        <span style="color: blue;">{{enganche.valor}}</span> 
+                </h3>
+                <input type="hidden" name="posicion" value="enganche">
+                <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+            </form>
+            <form class="vender2" method="post" action="{% url 'Vender' enganche.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="posicion" value="enganche">
+                <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+            </form>
+            {% else %}
+            <div class="formjugador">
+                <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                    <p>enganche:</p>
+                    {% csrf_token %}
+                    <input type="hidden" name="posicion" value="enganche">
+                    <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                </form>
+            </div>
+            {% endif %}
+            <br>
+        <div > 
+            <br>
+                {% if delantero %}
+                <div class="formjugador">
+                    <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                        {% csrf_token %}
+                        <h3>delantero: {{delantero.nombre}}
+                                <span style="color: rgb(12, 65, 109);">calidad: </span> 
+                                <span style="color: rgb(189, 52, 52);">{{delantero.general}}</span>
+                                <span style="color: rgb(12, 65, 109);">precio: </span> 
+                                <span style="color: blue;">{{delantero.valor}}</span> 
+                        </h3>
+                        <input type="hidden" name="posicion" value="delantero">
+                        <button class="botonjugadorE" type="submit" class="button" disabled>Comprar</button>
+                    </form>
+                    <form class="vender2" method="post" action="{% url 'Vender' delantero.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="posicion" value="delantero">
+                        <button class="botonjugadorE" type="submit" class="button">VENDER</button>
+                    </form>
+                    {% else %}
+                    <div class="formjugador">
+                        <form class="formjugadorX" method="post" action="{% url 'Jugadores' %}">
+                            <p>delantero:</p>
+                            {% csrf_token %}
+                            <input type="hidden" name="posicion" value="delantero">
+                            <button class="botonjugadorE" type="submit" class="button">Comprar</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                    <br>
+            </div>
+            <br>
+    </body>
+    <div>
+        <p>.</p>
+    </div>
+    </html>
+    
+    {% endblock cancha %}
