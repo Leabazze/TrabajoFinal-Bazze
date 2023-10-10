@@ -175,10 +175,14 @@ def crear_equipo(req):
     if req.method == 'POST':
         miFormulario = EquipoForm(req.POST)
         user = req.user
+        anterior_equipo = Equipo.objects.filter(usuario=user).first()
         if miFormulario.is_valid():
             data = miFormulario.cleaned_data
             equipo = Equipo(nombre=data['nombre'], usuario=user)
             equipo.save()
+
+            if anterior_equipo:
+                anterior_equipo.delete()
         return render (req, 'EquipoApp/equipo.html', {'equipo':equipo})
     else :
         miFormulario = EquipoForm()
