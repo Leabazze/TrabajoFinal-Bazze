@@ -1,4 +1,6 @@
 # TrabajoFinal-Bazze
+Aca el link del video explicando el funcionamiento
+https://www.youtube.com/watch?v=MzJ8Qa7WLNY
 Trabajo final del curso de Python orientado al desarrollo web
 Se me complico bastante para cumplir algunos requisitos por cuestiones de tiempo, se me hizo muy largo el proyecto.
 El proyecto es un juego de Manager de Futbol, esta realizado sobre la base de datos del Fifa 2022, de esta base de datos, cree funciones para obtener los clubes , asignarle un puntaje general que es un promedio de el puntaje de sus jugadores y relativo a este puntaje se le asigna una categoria.
